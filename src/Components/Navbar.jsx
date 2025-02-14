@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 import logo from "../assets/dollar.png"
+import { Link } from 'react-router-dom'
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] =useState(false)
-    
+    // div ta 1aad ay ku jiraan  bg-gradient-to-r from-[#0D1B2A] to-[#778DA9]
   return (
     <>
-    <div className='w-full h-full absolute bg-gradient-to-r from-blue-400 to-emerald-400'>
-        <header className='flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md'>
+    <div className='w-full h-full absolute  '>
+        <header className='flex justify-between items-center text-black py-3 px-8 md:px-32 bg-white drop-shadow-md'>
         <a href="">
             <img src={logo} alt="" className='w-8 hover:scale-105 transition-all' />
         </a>
         <ul className='hidden md:flex items-center gap-12 font-semibold text-base'>
-            <li className='p-2 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>Home</li>
-            <li className='p-2 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>About</li>
-            <li className='p-2 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>Product</li>
-            <li className='p-2 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>Contact</li>
+            <Link className='p-2 hover:bg-[#0D1B2A] hover:text-white rounded-md transition-all cursor-pointer' to="/">Home</Link>
+            <Link className='p-2 hover:bg-[#0D1B2A] hover:text-white rounded-md transition-all cursor-pointer' to="/About">About</Link>
+            <Link className='p-2 hover:bg-[#0D1B2A] hover:text-white rounded-md transition-all cursor-pointer' to="/Product">Product</Link>
+            <Link className='p-2 hover:bg-[#0D1B2A] hover:text-white rounded-md transition-all cursor-pointer' to= "/Contact">Contact</Link>
         </ul>
         <div className='relative hidden md:flex items-center justify-center gap-3'>
             <i className='bx bx-search absolute left-3 text-2xl text-gray-500'></i>
